@@ -1,23 +1,22 @@
-
-// App.js
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import CounterApp from './CounterApp';
-import ColorChangerApp from './ColorChangerApp';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const App = () => {
+import Home from './screens/Home';
+import Chatbox from './screens/Chatbox';
+import Comments from './screens/Comments';
+
+const Stack = createNativeStackNavigator();
+
+export default function App() {
   return (
-    <View style={styles.container}>
-      <CounterApp />
-      <ColorChangerApp />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Chatbox" component={Chatbox} />
+        <Stack.Screen name="Comments" component={Comments} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-};
+}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
-
-export default App;
