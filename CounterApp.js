@@ -1,4 +1,4 @@
-// CounterApp.js
+
 import React, { useState } from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
@@ -19,8 +19,10 @@ const CounterApp = () => {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1, // ✅ makes the container fill the screen
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center', // ✅ centers vertically
+    backgroundColor: '#fff', // optional: set a background color
   },
   title: {
     fontSize: 24,
@@ -35,6 +37,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     width: '80%',
+    marginTop: 20,
   },
 });
 

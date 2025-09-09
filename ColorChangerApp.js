@@ -1,4 +1,4 @@
-// ColorChangerApp.js
+
 import React, { useState } from 'react';
 import { View, Button, StyleSheet } from 'react-native';
 
@@ -7,9 +7,9 @@ const ColorChangerApp = () => {
 
   return (
     <View style={[styles.container, { backgroundColor }]}>
-      <Button title="White" onPress={() => setBackgroundColor('white')} />
+      <Button title="white" onPress={() => setBackgroundColor('white')} />
       <Button title="Light Blue" onPress={() => setBackgroundColor('lightblue')} />
-      <Button title="Light Green" onPress={() => setBackgroundColor('lightgreen')} />
+      <Button title="yellow" onPress={() => setBackgroundColor('yellow')} />
     </View>
   );
 };
